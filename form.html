@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout Form</title>
+  <style>
+    body {
+  background-color: #d2e664;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background-color: #a4c639;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.checkout-form fieldset {
+  border: 2px solid #8aa620;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #d7e888;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0 10px;
+  color: #4b5600;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.full {
+  flex: 1 1 100%;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input, textarea, select {
+  padding: 10px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.form-actions {
+  text-align: center;
+}
+
+button {
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #111;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form class="checkout-form">
+      <fieldset>
+        <legend>Step 1: Your details</legend>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="First and last name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="example@domain.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="Eg. +447500000000">
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Step 2: Delivery address</legend>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="address">Address</label>
+            <textarea id="address" rows="3" placeholder="Enter address"></textarea>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="postcode">Post code</label>
+            <input type="text" id="postcode">
+          </div>
+          <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" id="country">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="week">Preferred Delivery Week</label>
+            <input type="week" id="week">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Step 3: Card details</legend>
+        <div class="form-row">
+          <div class="form-group full">
+            <label>Card type</label>
+            <div class="radio-group">
+              <label><input type="radio" name="card" checked> <img src="https://img.icons8.com/color/24/visa.png"/> VISA</label>
+              <label><input type="radio" name="card"> <img src="https://img.icons8.com/color/24/amex.png"/> AmEx</label>
+              <label><input type="radio" name="card"> <img src="https://img.icons8.com/color/24/mastercard.png"/> Mastercard</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cardnumber">Card number</label>
+            <input type="text" id="cardnumber">
+          </div>
+          <div class="form-group">
+            <label for="security">Security code</label>
+            <input type="text" id="security">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group full">
+            <label for="cardname">Name on card</label>
+            <input type="text" id="cardname" placeholder="Exact name as on the card">
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit">BUY IT!</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
