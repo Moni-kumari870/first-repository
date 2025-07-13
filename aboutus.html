@@ -1,497 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-       * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-        }
+    header {
+      background-color: white;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 30px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-        header {
-            background-color: white;
-            border-bottom: 1px solid #ccc;
-            padding: 10px 30px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo img {
-            height: 80px;
-            width: 120px;
-            border-radius: 10px;
-        }
-
-        .logo span {
-            font-size: 14px;
-            line-height: 1.3;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            list-style: none;
-            gap: 20px;
-            margin-left: 30px;
-        }
-
-        .nav-links li {
-            position: relative;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            padding: 10px 5px;
-            font-size: 20px;
-            font-weight: 500;
-        }
-
-        .dropdown:hover .mega-menu {
-            display: flex;
-        }
-
-        .mega-menu {
-            display: none;
-            position: absolute;
-            top: 40px;
-            left: 0;
-            background: white;
-            width: 1000px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            padding: 20px;
-            justify-content: space-between;
-            z-index: 99;
-        }
-
-        .mega-menu .column {
-            width: 30%;
-        }
-
-        .mega-menu h3 {
-            color: #0073b1;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        .mega-menu a {
-            display: block;
-            color: #444;
-            padding: 5px 0;
-            text-decoration: none;
-        }
-
-        .mega-menu a:hover {
-            color: #f15a24;
-        }
-
-        .button-container {
-            display: inline-block;
-            background-color: skyblue;
-            color: black;
-            border: 4px solid black;
-            padding: 12px 25px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .button-container:hover {
-            background-color: #000;
-            color: white;
-            box-shadow: 0 4px 12px skyblue;
-        }
-
-        .call-now {
-            color: #000;
-            text-decoration: none;
-        }
-
-        .call-now:hover {
-            color: white;
-        }
-
-        .about-header {
-  background-color: #00b4f1;
-  padding: 50px 0 20px;
-  text-align: center;
-  color: white;
-  position: relative;
-}
-
-.about-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.breadcrumb {
-  margin-top: 10px;
-  font-size: 1.1em;
-  color: #cfefff;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.breadcrumb .arrow {
-  margin: 0 10px;
-}
-
-.breadcrumb .active {
-  color: white;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.divider {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: -10px;
-  background: white;
-  padding: 20px 0;
-}
-
-.line {
-  height: 3px;
-  background-color: #1ec9b0;
-  margin: 0 5px;
-  display: inline-block;
-}
-
-.short {
-  width: 20px;
-}
-
-.long {
-  width: 100px;
-}
-
-.about {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  margin: 50px;
-  margin-top: 30px;
-}
-
-.about-section {
-  padding: 60px 20px;
-  text-align: center;
-  margin-top: -50px;
-}
-
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  
-}
-
-.container p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-bottom: 10px;
-  
-}
-
-.quote {
-  margin-top: 40px;
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: black;
-  padding: 40px;
-  padding-bottom: -20px;
-  padding-top: 20px;
-}
-
-.features-section {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  padding: 60px 20px;
-  text-align: center;
-  flex-wrap: wrap;
-  background-color: #f9fafa;
-  margin-top: -90px;
-}
-
-.feature-box {
-  width: 300px;
-  margin: 20px;
-}
-
-.feature-box img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
-}
-
-.feature-box h3 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-  color: #222;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.feature-box p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #444;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-
-        .footer {
-            background-color: #111;
-            color: white;
-            padding: 40px 20px 20px;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .footer-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            border-bottom: 1px solid #333;
-            padding-bottom: 30px;
-        }
-
-        .footer-column h3 {
-            color: white;
-            border-bottom: 2px solid #00cfcf;
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-        }
-
-        .footer-column ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 8px;
-            color: #ccc;
-        }
-
-        .footer-column ul li:hover {
-            color: #00cfcf;
-        }
-
-        .footer-column ul li a {
-            text-decoration: none;
-        }
-
-        .footer-column ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .footer-contact img {
-            vertical-align: middle;
-            margin-right: 8px;
-        }
-
-        .footer-contact span {
-            color: #fff;
-            font-size: 14px;
-        }
-
-        .footer-social a {
-            margin: 0 10px;
-            display: inline-block;
-        }
-
-        .footer-social img {
-            filter: brightness(0) invert(1);
-            width: 24px;
-        }
-
-        .footer-location {
-            color: #ccc;
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-        }
-
-        .footer-location img {
-            margin-right: 10px;
-        }
-
-        .footer-location p {
-            margin: 0;
-        }
-
-        .whatsapp img {
-            height: 35px;
-        }
-
-        .email,
-        .skype {
-            margin-top: 10px;
-        }
-
-        .copyright {
-            text-align: center;
-            margin-top: 25px;
-            font-size: 13px;
-            color: #999;
-        }
-
-        
-    .container {
+    .navbar {
       display: flex;
-      flex-wrap: wrap;
-      padding: 30px;
-      justify-content: center;
-      gap: 30px;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .map {
-      flex: 1;
-      min-width: 350px;
-    }
-
-    .form-container {
-      flex: 1;
-      min-width: 350px;
+    .logo {
       display: flex;
-      flex-direction: column;
-      gap: 15px;
+      align-items: center;
+      gap: 10px;
     }
 
-    .form-row {
+    .logo img {
+      height: 80px;
+      width: 120px;
+      border-radius: 10px;
+    }
+
+    .logo span {
+      font-size: 14px;
+      line-height: 1.3;
+    }
+
+    .nav-links {
       display: flex;
-      gap: 15px;
+      align-items: center;
+      list-style: none;
+      gap: 20px;
+      margin-left: 30px;
     }
 
-    input, textarea {
-      width: 100%;
-      padding: 15px;
-      border: 1px solid #ccc;
-      border-radius: 25px;
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      padding: 10px 5px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .dropdown:hover .mega-menu {
+      display: flex;
+    }
+
+    .mega-menu {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background: white;
+      width: 1000px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      padding: 20px;
+      justify-content: space-between;
+      z-index: 99;
+    }
+
+    .mega-menu .column {
+      width: 30%;
+    }
+
+    .mega-menu h3 {
+      color: #0073b1;
+      margin-bottom: 10px;
       font-size: 16px;
     }
 
-    textarea {
-      height: 150px;
-      border-radius: 30px;
-      resize: none;
-      background: #f7f9f9;
+    .mega-menu a {
+      display: block;
+      color: #444;
+      padding: 5px 0;
+      text-decoration: none;
     }
 
-    .captcha {
+    .mega-menu a:hover {
+      color: #f15a24;
+    }
+
+    .button-container {
+      display: inline-block;
+      background-color: skyblue;
+      color: black;
+      border: 4px solid black;
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .button-container:hover {
+      background-color: #000;
+      color: white;
+      box-shadow: 0 4px 12px skyblue;
+    }
+
+    .call-now {
+      color: #000;
+      text-decoration: none;
+    }
+
+    .call-now:hover {
+      color: white;
+    }
+
+    .about-header {
+      background-color: #00b4f1;
+      padding: 50px 0 20px;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    .about-header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .breadcrumb {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #cfefff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .breadcrumb .arrow {
+      margin: 0 10px;
+    }
+
+    .breadcrumb .active {
+      color: white;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .breadcrumb a{
+      color: white;
+      text-decoration: none;
+    }
+
+    .divider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -10px;
+      background: white;
+      padding: 20px 0;
+    }
+
+    .line {
+      height: 3px;
+      background-color: #1ec9b0;
+      margin: 0 5px;
+      display: inline-block;
+    }
+
+    .short {
+      width: 20px;
+    }
+
+    .long {
+      width: 100px;
+    }
+
+    .about {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      margin: 50px;
+      margin-top: 30px;
+    }
+
+    .about-section {
+      padding: 60px 20px;
+      text-align: center;
+      margin-top: -50px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+
+    }
+
+    .container p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-bottom: 10px;
+
+    }
+
+    .quote {
+      margin-top: 40px;
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: black;
+      padding: 40px;
+      padding-bottom: -20px;
+      padding-top: 20px;
+    }
+
+    .features-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 60px 20px;
+      text-align: center;
+      flex-wrap: wrap;
+      background-color: #f9fafa;
+      margin-top: -90px;
+    }
+
+    .feature-box {
+      width: 300px;
+      margin: 20px;
+    }
+
+    .feature-box img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+    }
+
+    .feature-box h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #222;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .feature-box p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #444;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
+    .footer {
+      background-color: #111;
+      color: white;
+      padding: 40px 20px 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border-bottom: 1px solid #333;
+      padding-bottom: 30px;
+    }
+
+    .footer-column h3 {
+      color: white;
+      border-bottom: 2px solid #00cfcf;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px;
+      color: #ccc;
+    }
+
+    .footer-column ul li:hover {
+      color: #00cfcf;
+    }
+
+    .footer-column ul li a {
+      text-decoration: none;
+    }
+
+    .footer-column ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .footer-contact img {
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    .footer-contact span {
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .footer-social a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .footer-social img {
+      filter: brightness(0) invert(1);
+      width: 24px;
+    }
+
+    .footer-location {
+      color: #ccc;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-location img {
+      margin-right: 10px;
+    }
+
+    .footer-location p {
+      margin: 0;
+    }
+
+    .whatsapp img {
+      height: 35px;
+    }
+
+    .email,
+    .skype {
       margin-top: 10px;
     }
 
-    iframe {
-      border: 0;
-      width: 100%;
-      height: 450px;
-      border-radius: 10px;
+    .copyright {
+      text-align: center;
+      margin-top: 25px;
+      font-size: 13px;
+      color: #999;
     }
-    </style>
+  </style>
 </head>
+
 <body>
   <header>
-        <div class="navbar">
-            <div class="logo">
-                <img src="logo.jpg" alt="Logo" id="main-logo">
-                <span>Alpha <b>TECHWEB</b><br><small>Technology Simply!</small></span>
+    <div class="navbar">
+      <div class="logo">
+        <img src="logo.jpg" alt="Logo" id="main-logo">
+        <span>Alpha <b>TECHWEB</b><br><small>Technology Simply!</small></span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li class="dropdown">
+          <a href="#">Services ▾</a>
+          <div class="mega-menu">
+            <div class="column">
+              <h3>Web Services</h3>
+              <a href="web.html">E-Commerce Web Designing</a>
+              <a href="#">Custom Designing</a>
+              <a href="#">CMS Designing</a>
+              <a href="#">Static Designing</a>
+              <a href="#">Website Designing</a>
+              <a href="#">Web Development</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li class="dropdown">
-                    <a href="#">Services ▾</a>
-                    <div class="mega-menu">
-                        <div class="column">
-                            <h3>Web Services</h3>
-                            <a href="#">E-Commerce Web Designing</a>
-                            <a href="#">Custom Designing</a>
-                            <a href="#">CMS Designing</a>
-                            <a href="#">Static Designing</a>
-                            <a href="#">Website Designing</a>
-                            <a href="#">Web Development</a>
-                        </div>
-                        <div class="column">
-                            <h3>Digital Marketing</h3>
-                            <a href="#">Search Engine Optimization</a>
-                            <a href="#">Pay Per Click</a>
-                            <a href="#">Social Media Optimization</a>
-                            <a href="#">Online Reputation Management</a>
-                            <a href="#">Mobile App Marketing</a>
-                            <a href="#">Content Writing</a>
-                            <a href="#">Skincare Seo Services</a>
-                            <a href="#">Dental Seo Services</a>
-                        </div>
-                        <div class="column">
-                            <h3>Cyber Security</h3>
-                            <a href="#">Network Security</a>
-                            <a href="#">Security Operations Center</a>
-                            <a href="#">GRC & Vendor Oversight</a>
-                            <a href="#">Endpoint & Data Security</a>
-                            <a href="#">Vulnerability Management</a>
-                            <a href="#">Identity and Access Management</a>
-                        </div>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Portfolio ▾</a>
-                    <div class="mega-menu">
-                        <div class="column">
-                            <a href="#">Web Portfolio</a>
-                            <a href="#">SEO Portfolio</a>
-                            <a href="#">Social Media Portfolio</a>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Blog</a></li>
-            </ul>
-            <div class="button-container">
-                <a href="tel:+1234567890" class="call-now">📞 Call Now</a>
+            <div class="column">
+              <h3>Digital Marketing</h3>
+              <a href="#">Search Engine Optimization</a>
+              <a href="#">Pay Per Click</a>
+              <a href="#">Social Media Optimization</a>
+              <a href="#">Online Reputation Management</a>
+              <a href="#">Mobile App Marketing</a>
+              <a href="#">Content Writing</a>
+              <a href="#">Skincare Seo Services</a>
+              <a href="#">Dental Seo Services</a>
             </div>
-        </div>
-    </header>
-    <section class="about-header">
+            <div class="column">
+              <h3>Cyber Security</h3>
+              <a href="#">Network Security</a>
+              <a href="#">Security Operations Center</a>
+              <a href="#">GRC & Vendor Oversight</a>
+              <a href="#">Endpoint & Data Security</a>
+              <a href="#">Vulnerability Management</a>
+              <a href="#">Identity and Access Management</a>
+            </div>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="#">Portfolio ▾</a>
+          <div class="mega-menu">
+            <div class="column">
+              <a href="#">Web Portfolio</a>
+              <a href="#">SEO Portfolio</a>
+              <a href="#">Social Media Portfolio</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+      <div class="button-container">
+        <a href="tel:+1234567890" class="call-now">📞 Call Now</a>
+      </div>
+    </div>
+  </header>
+  <section class="about-header">
     <div class="container">
       <h1>ABOUT US</h1>
       <nav class="breadcrumb">
-        <span>Home</span>
+        <a href="home.html">Home</a>
         <span class="arrow">→</span>
         <span class="active">About Us</span>
       </nav>
@@ -505,19 +458,29 @@
   <section class="about-section">
     <div class="container">
       <p>
-        Founded in 2017, AlphaTech Web is a forward-thinking IT services company dedicated to empowering businesses through cutting-edge digital solutions. We combine innovation, strategy, and technology to help our clients thrive in a rapidly evolving digital landscape.
+        Founded in 2017, AlphaTech Web is a forward-thinking IT services company dedicated to empowering businesses
+        through cutting-edge digital solutions. We combine innovation, strategy, and technology to help our clients
+        thrive in a rapidly evolving digital landscape.
       </p>
       <p>
-        At AlphaTech Web, our core services span digital marketing, web development, cybersecurity, and PR & brand communication. Our digital marketing team is driven by data and creativity, helping brands amplify their online presence, engage target audiences, and achieve measurable growth. We build intuitive, high-performance websites that are not only visually stunning but also tailored to meet the unique goals and challenges of each business.
+        At AlphaTech Web, our core services span digital marketing, web development, cybersecurity, and PR & brand
+        communication. Our digital marketing team is driven by data and creativity, helping brands amplify their online
+        presence, engage target audiences, and achieve measurable growth. We build intuitive, high-performance websites
+        that are not only visually stunning but also tailored to meet the unique goals and challenges of each business.
       </p>
       <p>
-        We also excel in PR and strategic marketing, helping brands craft powerful narratives and build meaningful relationships with their audiences. Through compelling storytelling and targeted campaigns, we help businesses strengthen their reputation and market influence.
-        </p>
-        <p>
-            We also excel in PR and strategic marketing, helping brands craft powerful narratives and build meaningful relationships with their audiences. Through compelling storytelling and targeted campaigns, we help businesses strengthen their reputation and market influence.
-        </p>
+        We also excel in PR and strategic marketing, helping brands craft powerful narratives and build meaningful
+        relationships with their audiences. Through compelling storytelling and targeted campaigns, we help businesses
+        strengthen their reputation and market influence.
+      </p>
       <p>
-        At AlphaTech Web, we strive to be more than a service provider; we aim to be a partner in our clients' success, delivering high-quality, innovative solutions that drive sustainable growth and enhance brand value.
+        We also excel in PR and strategic marketing, helping brands craft powerful narratives and build meaningful
+        relationships with their audiences. Through compelling storytelling and targeted campaigns, we help businesses
+        strengthen their reputation and market influence.
+      </p>
+      <p>
+        At AlphaTech Web, we strive to be more than a service provider; we aim to be a partner in our clients' success,
+        delivering high-quality, innovative solutions that drive sustainable growth and enhance brand value.
       </p>
       <h2 class="quote">"Specialized by Choice. Exceptional by Design."</h2>
     </div>
@@ -539,121 +502,92 @@
       <p>As soon as the client reaches us, we provide them with the fastest and the best results possible.</p>
     </div>
   </section>
-  
-<div class="container">
-  <div class="map">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14017.083034294617!2d77.3689131!3d28.5860086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff25bfc70a3%3A0x863d5b1397d305e5!2sManaar%20Tower!5e0!3m2!1sen!2sin!4v1720693800000" 
-      allowfullscreen="" 
-      loading="lazy">
-    </iframe>
-  </div>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-column">
+        <h3>Services</h3>
+        <ul>
+          <li>Web Designing</li>
+          <li>GMB Management</li>
+          <li>Search Engine Optimization</li>
+          <li>Social Media Management</li>
+        </ul>
+      </div>
 
-  <div class="form-container">
-    <div class="form-row">
-      <input type="text" placeholder="First Name">
-      <input type="text" placeholder="Last Name">
-    </div>
-    <div class="form-row">
-      <input type="email" placeholder="Email Address">
-      <input type="tel" placeholder="Phone">
-    </div>
-    <input type="url" placeholder="Website URL">
-    <textarea placeholder="Details"></textarea>
+      <div class="footer-column">
+        <h3>Industries</h3>
+        <ul>
+          <li>Dental SEO Agency</li>
+          <li>Skincare SEO Agency</li>
+        </ul>
+      </div>
 
-    <div class="captcha">
-      <div style="border:1px solid #ccc; border-radius: 10px; padding:10px;">
-        <label><input type="checkbox"> I'm not a robot</label>
-        <div style="font-size: 10px; color: gray;">reCAPTCHA</div>
+      <div class="footer-column">
+        <h3>Locations</h3>
+        <ul>
+          <li>Australia</li>
+          <li>New York</li>
+          <li>Lucknow</li>
+          <li>Mumbai</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Beyond the Basics</h3>
+        <ul>
+          <li>Magazine Advertising</li>
+          <li>Cybersecurity Consultation</li>
+          <li>Salon Consulting & Marketing</li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Resources</h3>
+        <ul>
+          <li>Career</li>
+          <li>About Us</li>
+          <li>Blog</li>
+          <li>Privacy Policy</li>
+          <li>Refund Policy</li>
+          <li>Terms & Conditions</li>
+        </ul>
       </div>
     </div>
-  </div>
-</div>
-  <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>Services</h3>
-                <ul>
-                    <li>Web Designing</li>
-                    <li>GMB Management</li>
-                    <li>Search Engine Optimization</li>
-                    <li>Social Media Management</li>
-                </ul>
-            </div>
 
-            <div class="footer-column">
-                <h3>Industries</h3>
-                <ul>
-                    <li>Dental SEO Agency</li>
-                    <li>Skincare SEO Agency</li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>Locations</h3>
-                <ul>
-                    <li>Australia</li>
-                    <li>New York</li>
-                    <li>Lucknow</li>
-                    <li>Mumbai</li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>Beyond the Basics</h3>
-                <ul>
-                    <li>Magazine Advertising</li>
-                    <li>Cybersecurity Consultation</li>
-                    <li>Salon Consulting & Marketing</li>
-                </ul>
-            </div>
-
-            <div class="footer-column">
-                <h3>Resources</h3>
-                <ul>
-                    <li>Career</li>
-                    <li>About Us</li>
-                    <li>Blog</li>
-                    <li>Privacy Policy</li>
-                    <li>Refund Policy</li>
-                    <li>Terms & Conditions</li>
-                </ul>
-            </div>
+    <div class="footer-bottom">
+      <div class="footer-contact">
+        <div class="whatsapp">
+          <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp" />
+          <span>+1 424 777 2059</span><br>
+          <span>+91 892 993 1601</span>
         </div>
-
-        <div class="footer-bottom">
-            <div class="footer-contact">
-                <div class="whatsapp">
-                    <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp" />
-                    <span>+1 424 777 2059</span><br>
-                    <span>+91 892 993 1601</span>
-                </div>
-                <div class="email">
-                    <img src="https://img.icons8.com/color/30/email.png" alt="Email" />
-                    <span>info@alphatechweb.com</span>
-                </div>
-                <div class="skype">
-                    <img src="https://img.icons8.com/color/30/skype.png" alt="Skype" />
-                    <span>Quick Connect</span>
-                </div>
-            </div>
-
-            <div class="footer-social">
-                <a href="#"><img src="https://img.icons8.com/ios-filled/30/facebook.png" /></a>
-                <a href="#"><img src="https://img.icons8.com/ios-filled/30/linkedin.png" /></a>
-                <a href="#"><img src="https://img.icons8.com/ios-filled/30/pinterest.png" /></a>
-                <a href="#"><img src="https://img.icons8.com/ios-filled/30/instagram-new.png" /></a>
-            </div>
-
-            <div class="footer-location">
-                <img src="https://img.icons8.com/fluency/30/marker.png" alt="Location" />
-                <p>B-28, 10th Floor,<br> Manar Tower, Sec-132, Noida</p>
-            </div>
+        <div class="email">
+          <img src="https://img.icons8.com/color/30/email.png" alt="Email" />
+          <span>info@alphatechweb.com</span>
         </div>
-
-        <div class="copyright">
-            &copy; Alpha TechWeb 2025 All Rights Reserved
+        <div class="skype">
+          <img src="https://img.icons8.com/color/30/skype.png" alt="Skype" />
+          <span>Quick Connect</span>
         </div>
-    </footer>
+      </div>
+
+      <div class="footer-social">
+        <a href="#"><img src="https://img.icons8.com/ios-filled/30/facebook.png" /></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/30/linkedin.png" /></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/30/pinterest.png" /></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/30/instagram-new.png" /></a>
+      </div>
+
+      <div class="footer-location">
+        <img src="https://img.icons8.com/fluency/30/marker.png" alt="Location" />
+        <p>B-28, 10th Floor,<br> Manar Tower, Sec-132, Noida</p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      &copy; Alpha TechWeb 2025 All Rights Reserved
+    </div>
+  </footer>
 </body>
+
 </html>
