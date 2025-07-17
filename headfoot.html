@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headfoot</title>
+    <style>
+         .footer {
+            background-color: #111;
+            color: white;
+            padding: 40px 20px 20px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border-bottom: 1px solid #333;
+            padding-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            color: white;
+            border-bottom: 2px solid #00cfcf;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+            color: #ccc;
+        }
+
+        .footer-column ul li:hover {
+            color: #00cfcf;
+        }
+
+        .footer-column ul li a {
+            text-decoration: none;
+        }
+
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-contact img {
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        .footer-contact span {
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .footer-social img {
+            filter: brightness(0) invert(1);
+            width: 34px;
+        }
+
+        .footer-location {
+            color: #ccc;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-location img {
+            margin-right: 10px;
+        }
+
+        .footer-location p {
+            margin: 0;
+        }
+
+        .whatsapp img {
+            height: 35px;
+        }
+
+        .email,
+        .skype {
+            margin-top: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 18px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="new logo.jpg" alt="Logo" id="main-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Services ▾</a>
+                    <div class="mega-menu">
+                        <div class="column">
+                            <h3>Web Services</h3>
+                            <a href="web.html">E-Commerce Web Designing</a>
+                            <a href="#">Custom Designing</a>
+                            <a href="cms.html">CMS Designing</a>
+                            <a href="static.html">Static Designing</a>
+                            <a href="webdes.html">Website Designing</a>
+                            <a href="webdev.html">Web Development</a>
+                        </div>
+                        <div class="column">
+                            <h3>Digital Marketing</h3>
+                            <a href="seo.html">Search Engine Optimization</a>
+                            <a href="ppc.html">Pay Per Click</a>
+                            <a href="smo.html">Social Media Optimization</a>
+                            <a href="orm.html">Online Reputation Management</a>
+                            <a href="mam.html">Mobile App Marketing</a>
+                            <a href="cw.html">Content Writing</a>
+                            <a href="sss.html">Skincare Seo Services</a>
+                            <a href="dss.html">Dental Seo Services</a>
+                        </div>
+                        <div class="column">
+                            <h3>Cyber Security</h3>
+                            <a href="#">Network Security</a>
+                            <a href="#">Security Operations Center</a>
+                            <a href="#">GRC & Vendor Oversight</a>
+                            <a href="#">Endpoint & Data Security</a>
+                            <a href="#">Vulnerability Management</a>
+                            <a href="#">Identity and Access Management</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Portfolio ▾</a>
+                    <div class="mega-menu">
+                        <div class="column">
+                            <a href="#">Web Portfolio</a>
+                            <a href="#">SEO Portfolio</a>
+                            <a href="#">Social Media Portfolio</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="button-container">
+                <a href="tel:+1234567890" class="call-now">📞 Call Now</a>
+            </div>
+        </div>
+    </header>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li>Web Designing</li>
+                    <li>GMB Management</li>
+                    <li>Search Engine Optimization</li>
+                    <li>Social Media Management</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Industries</h3>
+                <ul>
+                    <li>Dental SEO Agency</li>
+                    <li>Skincare SEO Agency</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Locations</h3>
+                <ul>
+                    <li>Australia</li>
+                    <li>New York</li>
+                    <li>Lucknow</li>
+                    <li>Mumbai</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Beyond the Basics</h3>
+                <ul>
+                    <li>Magazine Advertising</li>
+                    <li>Cybersecurity Consultation</li>
+                    <li>Salon Consulting & Marketing</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li>Career</li>
+                    <li>About Us</li>
+                    <li>Blog</li>
+                    <li>Privacy Policy</li>
+                    <li>Refund Policy</li>
+                    <li>Terms & Conditions</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-contact">
+                <div class="whatsapp">
+                    <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp" />
+                    <span>+1 424 777 2059</span><br>
+                    <span>+91 892 993 1601</span>
+                </div>
+                <div class="email">
+                    <img src="https://img.icons8.com/color/30/email.png" alt="Email" />
+                    <span>info@alphatechweb.com</span>
+                </div>
+                <div class="skype">
+                    <img src="https://img.icons8.com/color/30/skype.png" alt="Skype" />
+                    <span>Quick Connect</span>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <a href="#"><img src="https://img.icons8.com/ios-filled/30/facebook.png" /></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/30/linkedin.png" /></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/30/pinterest.png" /></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/30/instagram-new.png" /></a>
+            </div>
+
+            <div class="footer-location">
+                <img src="https://img.icons8.com/fluency/30/marker.png" alt="Location" />
+                <p>B-28, 10th Floor,<br> Manar Tower, Sec-132, Noida</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; Adznova 2025 All Rights Reserved
+        </div>
+    </footer>
+</body>
+</html>

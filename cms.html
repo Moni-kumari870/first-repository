@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
+  <title>CMS designing </title>
   <style>
     * {
       margin: 0;
@@ -38,7 +38,7 @@
     .logo img {
       height: 80px;
       width: 260px;
-      /* border-radius: 10px; */
+      border-radius: 10px;
     }
 
     .logo span {
@@ -133,142 +133,143 @@
       color: white;
     }
 
-    .about-header {
-      background-color: #00b4f1;
-      padding: 50px 0 20px;
-      text-align: center;
+
+    .hero-section {
+      background-color: #00AEEF;
       color: white;
-      position: relative;
+      text-align: center;
+      padding: 30px 20px 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .about-header h1 {
+    .hero-section h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 28px;
       font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .breadcrumb {
       margin-top: 10px;
-      font-size: 1.1em;
-      color: #cfefff;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .breadcrumb .arrow {
-      margin: 0 10px;
-    }
-
-    .breadcrumb .active {
-      color: white;
-      font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-bottom: 20px;
     }
 
     .breadcrumb a {
       color: white;
       text-decoration: none;
+      margin: 0 5px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .divider {
+    .breadcrumb .current-page {
+      font-weight: bold;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    .breadcrumb span {
+      margin: 0 5px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .content-section {
+      text-align: center;
+      padding: 40px 20px 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-top: -20px;
+    }
+
+    .content-section h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .underline {
       display: flex;
       justify-content: center;
-      align-items: center;
-      margin-top: -10px;
-      background: white;
-      padding: 20px 0;
+      gap: 10px;
     }
 
-    .line {
-      height: 3px;
-      background-color: #1ec9b0;
-      margin: 0 5px;
+    .underline::before,
+    .underline::after {
+      content: '';
       display: inline-block;
+      width: 30px;
+      height: 4px;
+      background-color: #00b7c6;
+      border-radius: 2px;
     }
 
-    .short {
-      width: 20px;
-    }
 
-    .long {
-      width: 100px;
-    }
-
-    .about {
-      text-align: center;
+    .container {
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 18px;
-      margin: 50px;
-      margin-top: 30px;
     }
 
-    .about-section {
-      padding: 60px 20px;
+    h2 {
       text-align: center;
-      margin-top: -50px;
+      margin: 20px auto;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .highlight {
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .blue-banner {
+      background: #2b58a5;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .blue-banner span {
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    @media (max-width: 600px) {
+      .blue-banner {
+        font-size: 18px;
+        padding: 30px 10px;
+      }
     }
 
     .container {
-      max-width: 900px;
-      margin: 0 auto;
-
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
     }
 
-    .container p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 10px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding-bottom: 10px;
-
-    }
-
-    .quote {
-      margin-top: 40px;
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: white;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: black;
-      padding: 40px;
-      padding-bottom: -20px;
-      padding-top: 20px;
-    }
-
-    .features-section {
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-      padding: 60px 20px;
-      text-align: center;
-      flex-wrap: wrap;
-      background-color: #f9fafa;
-      margin-top: -90px;
-    }
-
-    .feature-box {
-      width: 300px;
-      margin: 20px;
-    }
-
-    .feature-box img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 20px;
-    }
-
-    .feature-box h3 {
-      font-size: 1.4rem;
-      margin-bottom: 10px;
+    h2 {
+      font-size: 36px;
+      margin-bottom: 0;
       color: #222;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .feature-box p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #444;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 5px;
+      color: #333;
+    }
+
+    ul {
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
     }
 
 
@@ -378,13 +379,14 @@
 </head>
 
 <body>
+
   <header>
     <div class="navbar">
       <div class="logo">
         <img src="new logo.jpg" alt="Logo" id="main-logo">
       </div>
       <ul class="nav-links">
-        <li><a href="homepage.html">Home</a></li>
+        <li><a href="home.html">Home</a></li>
         <li><a href="aboutus.html">About Us</a></li>
         <li class="dropdown">
           <a href="#">Services ▾</a>
@@ -439,68 +441,71 @@
       </div>
     </div>
   </header>
-  <section class="about-header">
-    <div class="container">
-      <h1>ABOUT US</h1>
-      <nav class="breadcrumb">
-        <a href="home.html">Home</a>
-        <span class="arrow">→</span>
-        <span class="active">About Us</span>
-      </nav>
-    </div>
-  </section>
+  <div class="hero-section">
+    <h1>CMS DESIGNING</h1>
+    <nav class="breadcrumb">
+      <a href="#">Home</a>
+      <span>→</span>
+      <a href="#" class="current-page">CMS Designing</a>
+    </nav>
+  </div>
 
-  <section class="divider">
-    <span class="line short"></span>
-    <span class="line long"></span>
-  </section>
-  <section class="about-section">
-    <div class="container">
-      <p>
-        Founded in 2017, AlphaTech Web is a forward-thinking IT services company dedicated to empowering businesses
-        through cutting-edge digital solutions. We combine innovation, strategy, and technology to help our clients
-        thrive in a rapidly evolving digital landscape.
-      </p>
-      <p>
-        At AlphaTech Web, our core services span digital marketing, web development, cybersecurity, and PR & brand
-        communication. Our digital marketing team is driven by data and creativity, helping brands amplify their online
-        presence, engage target audiences, and achieve measurable growth. We build intuitive, high-performance websites
-        that are not only visually stunning but also tailored to meet the unique goals and challenges of each business.
-      </p>
-      <p>
-        We also excel in PR and strategic marketing, helping brands craft powerful narratives and build meaningful
-        relationships with their audiences. Through compelling storytelling and targeted campaigns, we help businesses
-        strengthen their reputation and market influence.
-      </p>
-      <p>
-        We also excel in PR and strategic marketing, helping brands craft powerful narratives and build meaningful
-        relationships with their audiences. Through compelling storytelling and targeted campaigns, we help businesses
-        strengthen their reputation and market influence.
-      </p>
-      <p>
-        At AlphaTech Web, we strive to be more than a service provider; we aim to be a partner in our clients' success,
-        delivering high-quality, innovative solutions that drive sustainable growth and enhance brand value.
-      </p>
-      <h2 class="quote">"Specialized by Choice. Exceptional by Design."</h2>
-    </div>
-  </section>
-  <section class="features-section">
-    <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Support Icon">
-      <h3>Excellent Support</h3>
-      <p>We provide excellent support to all the customers visiting AlphaTech Web in all means necessary.</p>
-    </div>
-    <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Team Icon">
-      <h3>Awesome Team</h3>
-      <p>In our company, we have a specialized team which can solve any problem in the shortest time possible.</p>
-    </div>
-    <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/1004/1004571.png" alt="Performance Icon">
-      <h3>Faster Performance</h3>
-      <p>As soon as the client reaches us, we provide them with the fastest and the best results possible.</p>
-    </div>
-  </section>
+  <main class="content-section">
+    <h2>CMS Website Design Company</h2>
+    <div class="underline"></div>
+  </main>
+  <div class="container">
+    <p>
+      Content Management System is actually a web application that helps to manage the content without having much
+      knowledge about the web developing languages. Users can easily add content to the website with drop & drag
+      features and also modify text, images, videos, and audios as required. It is more preferable when you are
+      designing a website and giving remote to someone else to maintain or add new contents instantly.
+    </p>
+    <p>
+      If you are looking for a CMS designing company then your search ends here. We as SDAD Technology have mastery in
+      redesigning and developing your CMS based websites. We can easily add, delete, organize, modify, publish, edit and
+      update the pages as per the requirement of the client. The professionals who render CMS service are advanced and
+      perfect to fulfill customer’s demand. The CMS platform includes Wordpress, Drupal, open-cart, Magento etc. is used
+      to design and deliver the benefits to your business.
+    </p>
+    <p class="highlight">Features Included In Our Service</p>
+    <p>
+      As a leading organization, we make ourselves available with features that bring a great achievement to your
+      business.
+    </p>
+  </div>
+
+  <div class="blue-banner">
+    Making Your Idea's come live with your Requirements and design is our strong suit.
+    We use perfect designs to engage user on desktop n mobile platforms.
+  </div>
+  <div class="container">
+    <p>
+      We are a prominent organization, ranked high in the market in the terms of engaging numerous audiences. The CMS
+      designing services provided by us are the best and having full control over the content. Due to the vast
+      experience, content is created and edited on the web in an admin dashboard of the web application. The customized
+      content is then displayed to the viewers on a regular website (as front-end).
+    </p>
+    <p>
+      We keep the client’s requirements in mind and provide 24X7 customer support to resolve your queries. As we are a
+      leading CMS designing services company, we deliver the project with time-efficiency and cost-effectiveness. We
+      ensure hassle-free service for our customers.
+    </p>
+
+    <h2>What More Customers Deserve?</h2>
+    <h3>Let’s discuss some benefits of CMS designing services:</h3>
+
+    <ul>
+      <li>CMS helps to maintain the content on the website.</li>
+      <li>CMS based websites are always responsive.</li>
+      <li>It makes amazing changes to your website.</li>
+      <li>CMS permits the admin to modify content itself without having accurate knowledge of the Development.</li>
+      <li>It promotes one-hand control over the website.</li>
+      <li>You can see effective and innovative changes after getting helped by us.</li>
+      <li>Join us anytime if you want to enjoy quality service.</li>
+    </ul>
+  </div>
+
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column">
@@ -587,6 +592,7 @@
       &copy; Alpha TechWeb 2025 All Rights Reserved
     </div>
   </footer>
+
 </body>
 
 </html>

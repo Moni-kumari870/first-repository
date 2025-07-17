@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
+  <title>Static Designing</title>
   <style>
     * {
       margin: 0;
@@ -38,7 +38,7 @@
     .logo img {
       height: 80px;
       width: 260px;
-      /* border-radius: 10px; */
+      border-radius: 10px;
     }
 
     .logo span {
@@ -133,142 +133,172 @@
       color: white;
     }
 
-    .about-header {
-      background-color: #00b4f1;
-      padding: 50px 0 20px;
-      text-align: center;
+    .hero-section {
+      background-color: #00AEEF;
       color: white;
-      position: relative;
+      text-align: center;
+      padding: 30px 20px 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .about-header h1 {
+    .hero-section h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 28px;
       font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .breadcrumb {
       margin-top: 10px;
-      font-size: 1.1em;
-      color: #cfefff;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .breadcrumb .arrow {
-      margin: 0 10px;
-    }
-
-    .breadcrumb .active {
-      color: white;
-      font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-bottom: 20px;
     }
 
     .breadcrumb a {
       color: white;
       text-decoration: none;
+      margin: 0 5px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .divider {
+    .breadcrumb .current-page {
+      font-weight: bold;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    .breadcrumb span {
+      margin: 0 5px;
+    }
+
+    .content-section {
+      text-align: center;
+      padding: 40px 20px 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-top: -20px;
+    }
+
+    .content-section h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .underline {
       display: flex;
       justify-content: center;
-      align-items: center;
-      margin-top: -10px;
-      background: white;
-      padding: 20px 0;
+      gap: 10px;
     }
 
-    .line {
-      height: 3px;
-      background-color: #1ec9b0;
-      margin: 0 5px;
+    .underline::before,
+    .underline::after {
+      content: '';
       display: inline-block;
+      width: 30px;
+      height: 4px;
+      background-color: #00b7c6;
+      border-radius: 2px;
     }
 
-    .short {
-      width: 20px;
-    }
-
-    .long {
-      width: 100px;
-    }
-
-    .about {
-      text-align: center;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 18px;
-      margin: 50px;
-      margin-top: 30px;
-    }
-
-    .about-section {
-      padding: 60px 20px;
-      text-align: center;
-      margin-top: -50px;
-    }
 
     .container {
-      max-width: 900px;
-      margin: 0 auto;
-
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    .container p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 10px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding-bottom: 10px;
-
-    }
-
-    .quote {
-      margin-top: 40px;
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: white;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: black;
-      padding: 40px;
-      padding-bottom: -20px;
-      padding-top: 20px;
-    }
-
-    .features-section {
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-      padding: 60px 20px;
-      text-align: center;
-      flex-wrap: wrap;
-      background-color: #f9fafa;
-      margin-top: -90px;
-    }
-
-    .feature-box {
-      width: 300px;
-      margin: 20px;
-    }
-
-    .feature-box img {
-      width: 60px;
-      height: 60px;
-      margin-bottom: 20px;
-    }
-
-    .feature-box h3 {
-      font-size: 1.4rem;
+    h2 {
+      font-size: 24px;
+      margin-top: 20px;
       margin-bottom: 10px;
       color: #222;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
-    .feature-box p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #444;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .blue-banner {
+      background-color: #2b58a5;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.4;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    @media (max-width: 600px) {
+      .blue-banner {
+        font-size: 18px;
+        padding: 30px 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .box {
+      flex: 1 1 45%;
+      padding: 20px;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .box h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .box h2 i {
+      font-size: 26px;
+      margin-right: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      .flex-container {
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .box {
+        flex: 1 1 100%;
+        font-family: Arial, Helvetica, sans-serif;
+      }
     }
 
 
@@ -384,7 +414,7 @@
         <img src="new logo.jpg" alt="Logo" id="main-logo">
       </div>
       <ul class="nav-links">
-        <li><a href="homepage.html">Home</a></li>
+        <li><a href="home.html">Home</a></li>
         <li><a href="aboutus.html">About Us</a></li>
         <li class="dropdown">
           <a href="#">Services ▾</a>
@@ -439,68 +469,82 @@
       </div>
     </div>
   </header>
-  <section class="about-header">
-    <div class="container">
-      <h1>ABOUT US</h1>
-      <nav class="breadcrumb">
-        <a href="home.html">Home</a>
-        <span class="arrow">→</span>
-        <span class="active">About Us</span>
-      </nav>
-    </div>
-  </section>
+  <div class="hero-section">
+    <h1>STATIC DESIGNING</h1>
+    <nav class="breadcrumb">
+      <a href="#">Home</a>
+      <span>→</span>
+      <a href="#" class="current-page">Static Designing</a>
+    </nav>
+  </div>
 
-  <section class="divider">
-    <span class="line short"></span>
-    <span class="line long"></span>
-  </section>
-  <section class="about-section">
-    <div class="container">
+  <main class="content-section">
+    <h2>Static Webpage Designing</h2>
+    <div class="underline"></div>
+  </main>
+  <div class="container">
+    <p>
+      SDAD Technology is a leading Static Web Page Designing Company and we have combined knowledge, experience, and
+      talent of producing cutting-edge visuals in the field of static web page designing.
+    </p>
+
+    <h2>What SDAD Technology Does for your business?</h2>
+    <ul>
+      <li>We have professional website developers who work to produce stunning, imaginary as well as meaningful content.
+      </li>
+      <li>We create an attractive and professional website which is easy to access with proper navigation.</li>
+      <li>Our Static websites are designed to maintain the balance between quality images and loading time.</li>
+    </ul>
+
+    <p>
+      We have the unique as well as personalized static web page design with the finest quality and best-in-industry
+      price.
+    </p>
+  </div>
+
+  <div class="blue-banner">
+    Making Your Idea's come live with your Requirements and design is our strong suit.
+    We use perfect designs to engage user on desktop n mobile platforms.
+  </div>
+  <div class="flex-container">
+    <!-- Left Box: Services -->
+    <div class="box">
+      <h2><i class="fas fa-cogs"></i> Services We Offer:</h2>
       <p>
-        Founded in 2017, AlphaTech Web is a forward-thinking IT services company dedicated to empowering businesses
-        through cutting-edge digital solutions. We combine innovation, strategy, and technology to help our clients
-        thrive in a rapidly evolving digital landscape.
+        Static website designing services include various types of a static webpage with the specified capacity. Each
+        and every page is coded in HTML, JQuery, Bootstrap, and CSS and it shows the same information to each and every
+        visitor. Every site is designed and developed from a different perspective. Each static webpage is designed and
+        developed by professional web designers, having expertise in HTML, Bootstrap, Jquery, JavaScript and CSS.
       </p>
+
+      <h2><i class="fas fa-info-circle"></i> Why Are We Better?</h2>
       <p>
-        At AlphaTech Web, our core services span digital marketing, web development, cybersecurity, and PR & brand
-        communication. Our digital marketing team is driven by data and creativity, helping brands amplify their online
-        presence, engage target audiences, and achieve measurable growth. We build intuitive, high-performance websites
-        that are not only visually stunning but also tailored to meet the unique goals and challenges of each business.
+        If you are looking for some best reasons to approach us then here they are. With decades of experience, we have
+        achieved excellence in the field of building the best static website. The track record of SDAD Technology is
+        good as we are always up to date with the latest & advanced technology and other market trends.
       </p>
-      <p>
-        We also excel in PR and strategic marketing, helping brands craft powerful narratives and build meaningful
-        relationships with their audiences. Through compelling storytelling and targeted campaigns, we help businesses
-        strengthen their reputation and market influence.
-      </p>
-      <p>
-        We also excel in PR and strategic marketing, helping brands craft powerful narratives and build meaningful
-        relationships with their audiences. Through compelling storytelling and targeted campaigns, we help businesses
-        strengthen their reputation and market influence.
-      </p>
-      <p>
-        At AlphaTech Web, we strive to be more than a service provider; we aim to be a partner in our clients' success,
-        delivering high-quality, innovative solutions that drive sustainable growth and enhance brand value.
-      </p>
-      <h2 class="quote">"Specialized by Choice. Exceptional by Design."</h2>
     </div>
-  </section>
-  <section class="features-section">
-    <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Support Icon">
-      <h3>Excellent Support</h3>
-      <p>We provide excellent support to all the customers visiting AlphaTech Web in all means necessary.</p>
+
+    <!-- Right Box: Advantages -->
+    <div class="box">
+      <h2><i class="fas fa-plus"></i> Advantages</h2>
+      <p>
+        Does your business have brochures and leaflets? Then you have to choose a static web page design. It is the best
+        and essential tool that is active as an online brochure to increase your online business. Here are a few
+        advantages of having a Static Web Page design:
+      </p>
+      <ul>
+        <li>CMS helps to maintain the content on the website</li>
+        <li>CMS based websites are always responsive.</li>
+        <li>It makes amazing changes to your website.</li>
+        <li>CMS permits the admin to modify content itself without having accurate knowledge of Development.</li>
+        <li>There is a one hand control over the website.</li>
+        <li>You can see effective and innovative changes after getting helped by us.</li>
+        <li>Join us anytime if you want to enjoy quality service.</li>
+      </ul>
     </div>
-    <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Team Icon">
-      <h3>Awesome Team</h3>
-      <p>In our company, we have a specialized team which can solve any problem in the shortest time possible.</p>
-    </div>
-    <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/1004/1004571.png" alt="Performance Icon">
-      <h3>Faster Performance</h3>
-      <p>As soon as the client reaches us, we provide them with the fastest and the best results possible.</p>
-    </div>
-  </section>
+  </div>
+
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column">

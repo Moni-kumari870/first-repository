@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>E-commerce Website</title>
+  <title>Pay Per Click</title>
   <style>
     * {
       margin: 0;
@@ -143,14 +143,14 @@
 
     .hero-section h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 35px;
       font-weight: bold;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .breadcrumb {
       margin-top: 10px;
-      font-size: 16px;
+      font-size: 20px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin-bottom: 20px;
     }
@@ -201,72 +201,222 @@
       border-radius: 2px;
     }
 
-    .features-section {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 0 20px;
-      line-height: 1.7;
-      font-size: 16px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    .ppc-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 5%;
+      gap: 40px;
     }
 
-    .features-section h3 {
-      font-weight: bold;
-      margin-top: 30px;
-      margin-bottom: 10px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    .features-section ul {
-      margin-top: 10px;
-      padding-left: 20px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    .features-section ul li {
-      margin-bottom: 8px;
-    }
-
-    .idea-banner {
-      background-color: #4f6cb6;
-      color: white;
+    .ppc-image {
+      flex: 1 1 400px;
       text-align: center;
-      padding: 60px 20px;
-      font-size: 20px;
-      line-height: 1.6;
-      background-image: url('https://www.transparenttextures.com/patterns/circles.png');
-      /* Optional: add your background icons if needed */
-      background-repeat: repeat;
-      background-size: contain;
     }
 
-    .help-section {
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 0 20px;
+    .ppc-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .ppc-content {
+      flex: 1 1 500px;
+      max-width: 600px;
+      padding-top: -80px;
+      margin-top: -120px
+    }
+
+    .ppc-content h2 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+      color: #222;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .underline {
+      display: flex;
+      gap: 14px;
+      margin: 15px 0 30px;
+    }
+
+    .underline::before,
+    .underline::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background-color: #14b8c4;
+      border-radius: 5px;
+    }
+
+    .ppc-content p {
+      font-size: 1.05em;
       line-height: 1.7;
-      font-size: 16px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .help-section h2 {
-      font-size: 28px;
-      font-weight: bold;
-      margin-top: 40px;
-      margin-bottom: 15px;
+    @media (max-width: 768px) {
+      .ppc-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .underline {
+        justify-content: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+    }
+
+    .features-section {
+      padding: 60px 5%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .feature img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .feature-content h3 {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+      color: #222;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .help-section ul {
-      padding-left: 20px;
+    .feature-content p {
+      font-size: 1.02em;
+      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    @media (max-width: 600px) {
+      .feature {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+
+      .feature-content h3 {
+        margin-top: 10px;
+      }
+    }
+
+    /* Top Banner */
+    .hero-banner {
+      background: #3b61b1;
+      background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+      /* Optional pattern */
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .hero-banner h1 {
+      font-size: clamp(1.8rem, 2vw + 1.5rem, 2.5rem);
+      font-weight: 600;
+      margin: 0 auto;
+      max-width: 1000px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Content Section */
+    .content-section {
+      background: #fff;
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .content-section h2 {
+      font-size: 2rem;
+      font-weight: 600;
       margin-bottom: 20px;
+      color: #222;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .help-section ul li {
+    .content-section p {
+      font-size: 1.05rem;
+      max-width: 1000px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      .hero-banner h1 {
+        font-size: 1.6rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .content-section h2 {
+        font-size: 1.6rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .content-section p {
+        font-size: 1rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #222;
       margin-bottom: 10px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
+    strong {
+      display: inline-block;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #222;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    ul {
+      margin-top: 0;
+      padding-left: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 0 auto 40px auto;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.5rem;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        padding: 30px 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+    }
+
 
     .footer {
       background-color: #111;
@@ -436,100 +586,128 @@
     </div>
   </header>
   <div class="hero-section">
-    <h1>ECOMMERCE WEBSITES</h1>
+    <h1>Pay Per Click</h1>
     <nav class="breadcrumb">
-      <a href="home.html">Home</a>
+      <a href="#">Home</a>
       <span>→</span>
-      <a href="#" class="current-page">Ecommerce Website Designing</a>
+      <a href="#" class="current-page">Pay Per Click</a>
     </nav>
   </div>
 
-  <main class="content-section">
-    <h2>Ecommerce Website Design Company</h2>
-    <div class="underline"></div>
-  </main>
+  <section class="ppc-section">
+    <div class="ppc-image">
+      <img src="https://cdn-icons-png.flaticon.com/512/2920/2920044.png" alt="PPC Illustration">
+    </div>
+
+    <div class="ppc-content">
+      <h2>PPC Company In India</h2>
+      <div class="underline"></div>
+      <p>
+        PPC (Pay per Click) is a strategy used by online marketers to increase their chances of success. Many marketers
+        today use PPC services as it seems to be the most efficient way to succeed in this competitive world. SDAD
+        Technology can ensure that your business ads are displayed above organic search rankings. Businesses require a
+        PPC Company in India to increase relevant traffic that results in more conversions and product sales.
+      </p>
+      <p>
+        So, why waste your precious time wandering here and there, when the best Pay Per Click Advertising Company is
+        here, which delivers effective service in a short span of time. If you are looking for genuine leads for your
+        business and are ready to pay a good price for them, then choose our PPC campaign.
+      </p>
+    </div>
+  </section>
 
   <section class="features-section">
-    <p>
-      Nowadays E-commerce is very prominent all over the world. It is basically an online Store,
-      to make your business more impressive and renowned. We help you by creating alluring
-      E-commerce Website Designs Company in India to make your brand unique among the large
-      number of audience with a comprehensive library of easy-to-use features.
-    </p>
-    <p>
-      We, <strong>SDAD Technology</strong>, do amazing E-commerce Website Designing.
-      We are available with a fantastic team of designers, online marketers, developers and
-      online strategists who are expert in building a device-friendly E-commerce website.
-    </p>
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/189/189638.png" alt="Video Icon">
+      <div class="feature-content">
+        <h3>Video Advertising</h3>
+        <p>Video advertising encloses online advertisements which come on the display that have video within them, Video
+          Advertising plays an important role to attract the audience to particular campaigns.</p>
+      </div>
+    </div>
 
-    <h3>Features Included In Our Service</h3>
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/3448/3448279.png" alt="PPC Icon">
+      <div class="feature-content">
+        <h3>PPC Remarketing</h3>
+        <p>PPC remarketing is a form of online advertising that enables sites to show targeted ads to users who have
+          already visited their site. Remarketing, also known as retargeting which dramatically increases your
+          conversion rates and ROI.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/190/190624.png" alt="Social Icon">
+      <div class="feature-content">
+        <h3>Social Advertising</h3>
+        <p>Social advertising relies on networks or social information in generating, targeting, and delivering
+          marketing communications.</p>
+      </div>
+    </div>
+
+    <div class="feature">
+      <img src="https://cdn-icons-png.flaticon.com/512/181/181536.png" alt="Display Icon">
+      <div class="feature-content">
+        <h3>Display Advertising</h3>
+        <p>Display advertising is the part of online advertising that comes in several forms like banner ads, rich media
+          and many more. Display advertising prefers images, audio, and video to communicate an advertising message,
+          unlike text-based ads.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Top Banner -->
+  <section class="hero-banner">
+    <h1>
+      Making Your Idea's come live with your Requirements and design is our strong suit.
+      We use perfect designs to engage user on desktop n mobile platforms.
+    </h1>
+  </section>
+
+  <!-- Content Section -->
+  <section class="content-section">
+    <h2>How Does Pay Per Click (PPC) Advertising Company Work?</h2>
     <p>
-      As a leading organization, we make ourselves available with features that bring a great achievement to your
-      business.
+      PPC (Pay Per Click) is a way of advertising on the internet that helps bring more traffic to your website.
+      However, PPC services cost a small amount of money first, after which the PPC company in India promotes your brand
+      or services
+      on search engines like Google and Yahoo or maybe other platforms where people view your advertisement and follow
+      up to your website.
+      With the help of PPC, we research and optimise the correct keywords which help to get good visibility and results.
+      PPC requires
+      a lot of research and analysis to produce a better and more responsive result. The way we manage your
+      advertisement is to make
+      a comprehensive report about marketing plans from time to time. Here, we are the Best PPC Company in Noida to
+      provide you with
+      the best strategy. Our company's experts help you reach a huge audience by creating eye-catching ads, making us
+      the top PPC
+      company in India.
     </p>
+  </section>
+
+  <div class="section">
+    <h2>Are there any actual benefits of using PPC (Pay per Click) Advertising services?</h2>
+    <strong>There are a couple of benefits, but the predominant ones are mentioned below–</strong>
     <ul>
-      <li>Management related to the product, pricing, and catalog.</li>
-      <li>Tools of merchandising and marketing.</li>
-      <li>Searching for websites and guide navigation.</li>
-      <li>Embedded AI personalization and customers insights.</li>
-      <li>Mobile friendliness and one-touch payment option.</li>
-      <li>SEO friendly.</li>
-      <li>Responsiveness, Scalability, Well-performing</li>
+      <li>It helps to increase brand awareness.</li>
+      <li>SEO might take a little time to promote your website, but PPC is rapid and efficient.</li>
+      <li>You get to switch the services on and off whenever you please.</li>
+      <li>The best PPC company in India helps you reach a huge crowd with effective services.</li>
+      <li>One can plan their next move for their business based on the PPC results.</li>
     </ul>
-  </section>
+  </div>
 
-  <section class="idea-banner">
+  <div class="section">
+    <h2>Where to find the best PPC services?</h2>
     <p>
-      Making Your Ideas come live with your Requirements and design is our strong suit.
-      We use perfect designs to engage users on desktop and mobile platforms.
+      For beginners who are just getting into PPC, choosing a good PPC service provider can be a little tricky. But you
+      need not worry,
+      as PPC services offered by SDAD Technology are ideal for all kinds of marketers (beginners or professionals).
+      SDAD technology has built up a reputation as the best PPC company in India for offering efficient and affordable
+      PPC services.
+      We have a list of satisfied customers all over the globe. One of the customers, in their recent feedback, said,
+      “I would go with SDAD technology PPC services over any other whenever I need PPC services for my website.”
     </p>
-  </section>
-  <section class="help-section">
-    <p>
-      These are some features that we strive to deliver to our customers and also make them engaged with us for a long
-      time.
-      SDAD Technology applies innovative ideas, creates visually appealing and straightforward checkouts options to make
-      things user friendly for customers.
-    </p>
-
-    <h2>How We Are Helping?</h2>
-    <ul>
-      <li>E-commerce Websites we design are fully customized and get fit with the needs and values of your business.
-      </li>
-      <li>We provide easy integration of leading accounting, billing and marketing tools.</li>
-      <li>We provide a secure shopping cart with multiple payment methods and shipping options.</li>
-    </ul>
-
-    <p>
-      SDAD Technology helps the clients to succeed by providing well-performing and smooth web solutions that people
-      love to use.
-      We always want to build an E-commerce Website Design & Development Company in Noida which can perform a long-term
-      relationship
-      with our customers. Keeping all these points in mind we design a website that is easy to operate on every device
-      like mobile,
-      PC, laptops, Tablets and others. We enable your customer to shop freely, pay online or on delivery and many other
-      similar options.
-    </p>
-
-    <h2>What More Customers Deserve?</h2>
-    <p>
-      Customers are always worried about online shopping due to the leakage of account details.
-      But SDAD Technology provides easy & secure access to transaction history, details about back-order or pre-order
-      products,
-      automatic notifications regarding a sale, discounts or any other, Email or text alerts for multi purposes.
-      Moreover, your website will respond fast and efficiently every time with a fully integrated B2C solution, product
-      data,
-      customer information, order status, and other related instructions.
-    </p>
-
-    <p>
-      A physical store keeps customers within the boundary. But an E-commerce website has the potential to sell the
-      product and
-      spread your business nationally or even internationally with the ability to run your business 24 x 7 x 365.
-      SDAD Technology has the ability to deliver the E-commerce Website with the enterprise-level quality and features
-      that essentially help business sell.
-    </p>
-  </section>
+  </div>
 
   <footer class="footer">
     <div class="footer-container">
@@ -617,6 +795,7 @@
       &copy; Alpha TechWeb 2025 All Rights Reserved
     </div>
   </footer>
+
 </body>
 
 </html>

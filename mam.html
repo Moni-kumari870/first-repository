@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile App Marketing</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo img {
+            height: 80px;
+            width:260px;
+            /* border-radius: 10px; */
+        }
+
+        .logo span {
+            font-size: 14px;
+            line-height: 1.3;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 20px;
+            margin-left: 30px;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 5px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .dropdown:hover .mega-menu {
+            display: flex;
+        }
+
+        .mega-menu {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background: white;
+            width: 1000px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            justify-content: space-between;
+            z-index: 99;
+        }
+
+        .mega-menu .column {
+            width: 30%;
+        }
+
+        .mega-menu h3 {
+            color: #0073b1;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .mega-menu a {
+            display: block;
+            color: #444;
+            padding: 5px 0;
+            text-decoration: none;
+        }
+
+        .mega-menu a:hover {
+            color: #f15a24;
+        }
+
+        .button-container {
+            display: inline-block;
+            background-color: skyblue;
+            color: black;
+            border: 4px solid black;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .button-container:hover {
+            background-color: #000;
+            color: white;
+            box-shadow: 0 4px 12px skyblue;
+        }
+
+        .call-now {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .call-now:hover {
+            color: white;
+        }
+
+        .hero {
+            background: #00aee9;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 30px;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .breadcrumb {
+            background: #00aee9;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            margin-top: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .breadcrumb span {
+            margin: 0 10px;
+        }
+
+
+        .section-title {
+            background: #fff;
+            padding: 40px 20px 20px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 500;
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .divider {
+            margin: 10px auto 20px;
+            height: 4px;
+            width: 60px;
+            background: #00aee9;
+            position: relative;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 4px;
+            width: 20px;
+            background: #00aee9;
+        }
+
+        .divider::before {
+            left: -30px;
+        }
+
+        .divider::after {
+            right: -30px;
+        }
+
+        .content h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-left: 80px;
+            padding-right: 80px;
+            font-size: 22px;
+        }
+
+        .content p {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-left: 80px;
+            padding-right: 80px;
+            font-size: 18px;
+        }
+
+        .content h3 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-left: 80px;
+            padding-right: 80px;
+            font-size: 20px;
+        }
+
+        .header {
+            background-color: #4267b2;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 1.5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+            .footer {
+            background-color: #111;
+            color: white;
+            padding: 40px 20px 20px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border-bottom: 1px solid #333;
+            padding-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            color: white;
+            border-bottom: 2px solid #00cfcf;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+            color: #ccc;
+        }
+
+        .footer-column ul li:hover {
+            color: #00cfcf;
+        }
+
+        .footer-column ul li a {
+            text-decoration: none;
+        }
+
+        .footer-column ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-contact img {
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        .footer-contact span {
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .footer-social img {
+            filter: brightness(0) invert(1);
+            width: 24px;
+        }
+
+        .footer-location {
+            color: #ccc;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-location img {
+            margin-right: 10px;
+        }
+
+        .footer-location p {
+            margin: 0;
+        }
+
+        .whatsapp img {
+            height: 35px;
+        }
+
+        .email,
+        .skype {
+            margin-top: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 13px;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="new logo.jpg" alt="Logo" id="main-logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Services ▾</a>
+                    <div class="mega-menu">
+                        <div class="column">
+                            <h3>Web Services</h3>
+                            <a href="web.html">E-Commerce Web Designing</a>
+                            <a href="#">Custom Designing</a>
+                            <a href="cms.html">CMS Designing</a>
+                            <a href="static.html">Static Designing</a>
+                            <a href="webdes.html">Website Designing</a>
+                            <a href="webdev.html">Web Development</a>
+                        </div>
+                        <div class="column">
+                            <h3>Digital Marketing</h3>
+                            <a href="seo.html">Search Engine Optimization</a>
+                            <a href="ppc.html">Pay Per Click</a>
+                            <a href="smo.html">Social Media Optimization</a>
+                            <a href="#">Online Reputation Management</a>
+                            <a href="#">Mobile App Marketing</a>
+                            <a href="#">Content Writing</a>
+                            <a href="#">Skincare Seo Services</a>
+                            <a href="#">Dental Seo Services</a>
+                        </div>
+                        <div class="column">
+                            <h3>Cyber Security</h3>
+                            <a href="#">Network Security</a>
+                            <a href="#">Security Operations Center</a>
+                            <a href="#">GRC & Vendor Oversight</a>
+                            <a href="#">Endpoint & Data Security</a>
+                            <a href="#">Vulnerability Management</a>
+                            <a href="#">Identity and Access Management</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Portfolio ▾</a>
+                    <div class="mega-menu">
+                        <div class="column">
+                            <a href="#">Web Portfolio</a>
+                            <a href="#">SEO Portfolio</a>
+                            <a href="#">Social Media Portfolio</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="button-container">
+                <a href="tel:+1234567890" class="call-now">📞 Call Now</a>
+            </div>
+        </div>
+    </header>
+    <div class="hero">
+        <h1>Online Reputation Management</h1>
+        <div class="breadcrumb">
+            <a href="#">Home</a> <span>→</span> Online Reputation Management
+        </div>
+    </div>
+
+    <div class="section-title">
+        <h2>Online Reputation Management -ORM</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="content">
+        <p>
+
+            Mobile Marketing is a vast term which includes various activities. These activities can be done with the
+            help of devices like mobile and tablets. Mobile app marketing is focused on app promotion, the engagement
+            and the retention of the users who have already downloaded your app. To understand the various benefits of
+            mobile app development, the best way is to approach these mobile app marketing services.
+        </p>
+        <h2>
+            What is Mobile App Marketing?
+        </h2>
+        <p>
+            Mobile app marketing is the process of creating and maintaining marketing campaigns to reach every user at
+            each stage of the marketing funnel. It comprises the full life cycle of interacting with your users. Varying
+            companies also provide mobile app marketing services to increase your business at constant speed.
+        </p>
+        <h2>
+            Best Mobile App Marketing Strategies –
+        </h2>
+        <p>
+            There are numerous strategies which must be adapted by top mobile app marketing companies. We are going to
+            provide you some strategies which can help you to do the best marketing for your mobile app.
+        </p>
+        <h3>
+            1. Find out your audience
+        </h3>
+        <p>
+            You must know about what type of audience you want to target and what kind of people will use your app.
+            While selecting your audience, please consider the demographic category also. You must know that people act
+            according to their lifestyle, spending habits and recreational behavior.
+        </p>
+        <h3>
+            2. Competitors are no less
+        </h3>
+        <p>
+            Never judge your competitors. They can be your main obstacle at any point of time. You can learn a lot from
+            your competitor’s mistake and their experiments. Those feedbacks will play a major role in your app
+            marketing. Top mobile app marketing companies always keep an eye on their competitors’ actions.
+        </p>
+        <h3>
+            3. Start marketing at an early stage
+        </h3>
+        <p>
+            Marketing should be started before app development. You must design your strategies and follow them
+            accordingly. When the release date of your app gets closer, you must start preparing your marketing efforts
+            with trailers, short video advertisements and other formal strategies.
+        </p>
+    </div>
+    <div class="header">
+        Making Your Idea's come live with your Requirements and design is our strong suit. We use perfect designs to
+        engage user on desktop n mobile platforms.
+    </div>
+    <div class="content">
+        <h3>
+            4. Optimization of your app store page
+        </h3>
+        <p>
+            Optimization of anything gives you thriving results. And, in this case you must optimize your app store
+            page. You must build an effective app store page. This page must include all essential points which lead
+            your app to the pinnacle of success.
+        </p>
+        <h3>
+            5. Keep focusing on reviews
+        </h3>
+        <p>
+            In recent years, reviews are the game changer. Positive and authentic reviews can be your image builder. On
+            the contrary, negative reviews can damage your already built goodwill.
+        </p>
+        <h3>
+            6. Social media is a God
+        </h3>
+        <p>
+            Social Media is a panacea for all kinds of problems. These platforms make your app visible to all types of
+            audience. And, you should not forget it while marketing your mobile app.
+        </p>
+        <h3>
+            7. Target Influencers
+        </h3>
+        <p>
+            They are the key opinion leaders. Nowadays they are more like the latest and much more accessible version of
+            traditional celebrity.
+        </p>
+        <h3>
+            8. Keep an eye on results
+        </h3>
+        <p>
+            Always keep an eagle eye on your Key Performance Indicators (KPI). You must review user feedback and be
+            responsive towards it.
+        </p>
+        <h3>
+            9. SEO is the king
+        </h3>
+        <p>
+            Never make the mistake of leaving SEO behind. Don’t you ever forget that people still use hashtags and
+            search engines to dig out information about your app.
+        </p>
+        <h2>
+            Benefits from Mobile App marketing-
+        </h2>
+        <p>
+            Through mobile app marketing you get a chance to communicate your audience directly. Through direct
+            communication you get to know about geographical locations, shopping behavior and demographics of users.<br>
+
+            Mobile App marketing gives your brand a relentless visibility since people don’t have that much time to
+            access long desktop office sessions.<br>
+            Mobile App marketing always enhances user experience.<br>
+            Mobile App Marketing bridges the gap between business and consumers. Through such apps, consumers get a
+            chance to interact with business experts.
+        </p>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li>Web Designing</li>
+                    <li>GMB Management</li>
+                    <li>Search Engine Optimization</li>
+                    <li>Social Media Management</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Industries</h3>
+                <ul>
+                    <li>Dental SEO Agency</li>
+                    <li>Skincare SEO Agency</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Locations</h3>
+                <ul>
+                    <li>Australia</li>
+                    <li>New York</li>
+                    <li>Lucknow</li>
+                    <li>Mumbai</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Beyond the Basics</h3>
+                <ul>
+                    <li>Magazine Advertising</li>
+                    <li>Cybersecurity Consultation</li>
+                    <li>Salon Consulting & Marketing</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li>Career</li>
+                    <li>About Us</li>
+                    <li>Blog</li>
+                    <li>Privacy Policy</li>
+                    <li>Refund Policy</li>
+                    <li>Terms & Conditions</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-contact">
+                <div class="whatsapp">
+                    <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp" />
+                    <span>+1 424 777 2059</span><br>
+                    <span>+91 892 993 1601</span>
+                </div>
+                <div class="email">
+                    <img src="https://img.icons8.com/color/30/email.png" alt="Email" />
+                    <span>info@alphatechweb.com</span>
+                </div>
+                <div class="skype">
+                    <img src="https://img.icons8.com/color/30/skype.png" alt="Skype" />
+                    <span>Quick Connect</span>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <a href="#"><img src="https://img.icons8.com/ios-filled/30/facebook.png" /></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/30/linkedin.png" /></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/30/pinterest.png" /></a>
+                <a href="#"><img src="https://img.icons8.com/ios-filled/30/instagram-new.png" /></a>
+            </div>
+
+            <div class="footer-location">
+                <img src="https://img.icons8.com/fluency/30/marker.png" alt="Location" />
+                <p>B-28, 10th Floor,<br> Manar Tower, Sec-132, Noida</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            &copy; Alpha TechWeb 2025 All Rights Reserved
+        </div>
+    </footer>
+    
+</body>
+
+</html>

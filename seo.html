@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
-  <style>
+  <title>SEO </title>
+  <STYle>
     * {
       margin: 0;
       padding: 0;
@@ -38,7 +38,7 @@
     .logo img {
       height: 80px;
       width: 260px;
-      /* border-radius: 10px; */
+      border-radius: 10px;
     }
 
     .logo span {
@@ -133,141 +133,231 @@
       color: white;
     }
 
-    .about-header {
-      background-color: #00b4f1;
-      padding: 50px 0 20px;
-      text-align: center;
+    .hero-section {
+      background-color: #00AEEF;
       color: white;
-      position: relative;
+      text-align: center;
+      padding: 30px 20px 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .about-header h1 {
+    .hero-section h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 28px;
       font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .breadcrumb {
       margin-top: 10px;
-      font-size: 1.1em;
-      color: #cfefff;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .breadcrumb .arrow {
-      margin: 0 10px;
-    }
-
-    .breadcrumb .active {
-      color: white;
-      font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-bottom: 20px;
     }
 
     .breadcrumb a {
       color: white;
       text-decoration: none;
+      margin: 0 5px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .divider {
+    .breadcrumb .current-page {
+      font-weight: bold;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    .breadcrumb span {
+      margin: 0 5px;
+    }
+
+    .content-section {
+      text-align: center;
+      padding: 40px 20px 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-top: -20px;
+    }
+
+    .content-section h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .underline {
       display: flex;
       justify-content: center;
-      align-items: center;
-      margin-top: -10px;
-      background: white;
-      padding: 20px 0;
+      gap: 10px;
     }
 
-    .line {
-      height: 3px;
-      background-color: #1ec9b0;
-      margin: 0 5px;
+    .underline::before,
+    .underline::after {
+      content: '';
       display: inline-block;
+      width: 30px;
+      height: 4px;
+      background-color: #00b7c6;
+      border-radius: 2px;
     }
 
-    .short {
-      width: 20px;
-    }
-
-    .long {
-      width: 100px;
-    }
-
-    .about {
-      text-align: center;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 18px;
-      margin: 50px;
-      margin-top: 30px;
-    }
-
-    .about-section {
-      padding: 60px 20px;
-      text-align: center;
-      margin-top: -50px;
-    }
-
-    .container {
+    .section {
+      padding: 40px 20px;
       max-width: 900px;
       margin: 0 auto;
-
-    }
-
-    .container p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 10px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding-bottom: 10px;
-
-    }
-
-    .quote {
-      margin-top: 40px;
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: white;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: black;
-      padding: 40px;
-      padding-bottom: -20px;
-      padding-top: 20px;
-    }
-
-    .features-section {
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-      padding: 60px 20px;
       text-align: center;
-      flex-wrap: wrap;
-      background-color: #f9fafa;
-      margin-top: -90px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .feature-box {
-      width: 300px;
-      margin: 20px;
+    .section p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-bottom: 30px;
     }
 
-    .feature-box img {
+    .image-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Optional top line decoration */
+    .decor {
       width: 60px;
-      height: 60px;
-      margin-bottom: 20px;
+      height: 4px;
+      background-color: #23c6c8;
+      margin: 0 auto 15px auto;
+      border-radius: 4px;
     }
 
-    .feature-box h3 {
-      font-size: 1.4rem;
+    .para {
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding-right: 60px;
+      padding-left: 60px;
+
+    }
+
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 50px 5%;
+      box-sizing: border-box;
+      gap: 60px;
+    }
+
+    .left,
+    .right {
+      flex: 1 1 45%;
+      min-width: 300px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    ul li {
       margin-bottom: 10px;
+      font-size: 1.05em;
+    }
+
+    .illustration {
+      text-align: center;
+      margin-top: 150px;
+    }
+
+    .illustration img {
+      max-width: 120px;
+    }
+
+    p {
+      font-size: 1.05em;
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+      }
+    }
+
+
+    /* --- HERO ------------------------------------ */
+    .hero {
+      background: #3b61b1;
+      /* optional subtle line‑icons pattern; replace with your own if desired */
+      background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+      color: #fff;
+      text-align: center;
+      padding: 70px 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.5rem, 2vw + 1.5rem, 2.2rem);
+      font-weight: 600;
+      max-width: 1100px;
+      margin-inline: auto;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* --- INTRO SECTION --------------------------- */
+    .intro-wrapper {
+      background: #f5f9fa;
+      padding: 70px 20px;
+    }
+
+    .intro {
+      max-width: 1100px;
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .intro h2 {
+      font-size: clamp(1.8rem, 2vw + 1.6rem, 2.6rem);
+      font-weight: 600;
+      margin-bottom: 12px;
       color: #222;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .feature-box p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #444;
+    /* twin cyan lines */
+    .intro .underline {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      margin-bottom: 35px;
+    }
+
+    .underline::before,
+    .underline::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      border-radius: 4px;
+      background: #14b8c4;
+      /* teal/cyan */
+    }
+
+    .intro p {
+      font-size: 1.05rem;
+      max-width: 800px;
+      margin: 0 auto 22px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
@@ -374,17 +464,18 @@
       font-size: 13px;
       color: #999;
     }
-  </style>
+  </STYle>
 </head>
 
 <body>
+
   <header>
     <div class="navbar">
       <div class="logo">
         <img src="new logo.jpg" alt="Logo" id="main-logo">
       </div>
       <ul class="nav-links">
-        <li><a href="homepage.html">Home</a></li>
+        <li><a href="home.html">Home</a></li>
         <li><a href="aboutus.html">About Us</a></li>
         <li class="dropdown">
           <a href="#">Services ▾</a>
@@ -439,68 +530,109 @@
       </div>
     </div>
   </header>
-  <section class="about-header">
-    <div class="container">
-      <h1>ABOUT US</h1>
-      <nav class="breadcrumb">
-        <a href="home.html">Home</a>
-        <span class="arrow">→</span>
-        <span class="active">About Us</span>
-      </nav>
+  <div class="hero-section">
+    <h1>Search Engine Optimization</h1>
+    <nav class="breadcrumb">
+      <a href="#">Home</a>
+      <span>→</span>
+      <a href="#" class="current-page"> Search Engine Optimization</a>
+    </nav>
+  </div>
+
+  <main class="content-section">
+    <h2>Best SEO Company In Noida, India</h2>
+    <div class="underline"></div>
+  </main>
+  <section class="section">
+    <div class="decor"></div>
+    <p>SDAD Technology is the best SEO Company in Noida. This service provider that specifically directed to deliver the
+      best service to customers.</p>
+    <div class="image-container">
+      <img src="ChatGPT Image Jul 14, 2025, 11_21_53 AM.png" alt="Workspace Illustration">
+    </div>
+  </section>
+  <div class="para">
+    <p>We are the best SEO company in Noida providing a comprehensive range of services to help businesses stand out 0f
+      the crowd in the online world. As an industry expert, we have a proven track record in formulating internet
+      marketing strategies leveraging our experience and agile methodologies.</p>
+    <p>
+      Certified SEO executives at SDAD Technology strive to meet the individual needs of companies to deliver the best
+      results possible. We are a reputed SEO company in Noida, consistently rendering world-class services to various
+      industry verticals worldwide.
+    </p>
+    <p>
+      Our SEO services are all about what you need because we build strategies in a way that meets your exceptional
+      needs. As the best SEO company in India, we pay attention to every detail to ensure we deliver the best results
+      and achieve customer satisfaction.
+    </p>
+    <p>
+      To provide the Best SEO Services in Noida, we help rank your website in this competitive world and engage many
+      consumers with your business to earn high profits. We are a reputed Best SEO Company in Noida because of our
+      attributes. We know how to behave and target the audience effectively to achieve the best SEO results.
+      Additionally, we better know the importance of being on top of Google searches.
+    </p>
+    <p>
+      With the help of an SEO Company, a businessman can achieve tremendous success and create a unique presence in the
+      market. There is nothing wrong with saying SEO is the best internet marketing technique that generates more sales.
+      We provide an extra large edge by doing technical analysis for higher rank. If you are looking for an SEO Service
+      in Delhi NCR, choose SDAD Technology and rank your business.
+    </p>
+  </div>
+  <section class="section">
+    <div class="left">
+      <h2>Benefits of Hiring the Best SEO Company in India:</h2>
+      <ul>
+        <li>Available at low and affordable cost.</li>
+        <li>Generate huge traffic.</li>
+        <li>Better return on Investment when compared to traditional strategies.</li>
+        <li>Taking your business to a whole new level.</li>
+        <li>You can reach out to a wider audience, too.</li>
+      </ul>
+      <div class="illustration">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920051.png" alt="SEO Illustration">
+      </div>
+    </div>
+
+    <div class="right">
+      <h2>Choose The Right SEO Packages And Plans :</h2>
+      <p>Everybody wants to see their website at the top of search engines, and choosing the best SEO company is key.
+        Our SEO Services in India can give you everything you need to achieve the top rankings on search engines. A
+        keyword selection is one of the major parts of an SEO operation. Why? Keywords can drive a lot of website
+        traffic and result in great sales for your services or products.</p>
+      <p>However, as the best SEO company in Noida, we devise strategies to cover the entire website's analysis, such as
+        keyword research, meta tag optimisation, etc. We offer complete assurance related to SEO packages and pricing as
+        well. We add value to your business, encourage the audience, engage customers and generate revenue.</p>
+    </div>
+  </section>
+  <!-- HERO -->
+  <header class="hero">
+    <h1>
+      Making Your Idea's come live with your Requirements and design is our strong suit.
+      We use perfect designs to engage user on desktop n mobile platforms.
+    </h1>
+  </header>
+
+  <!-- INTRO / OFFER SECTION -->
+  <section class="intro-wrapper">
+    <div class="intro">
+      <h2>We Provide The Exceptional SEO Services At An Affordable Price:</h2>
+      <div class="underline"></div>
+
+      <p>When compared to paid search, we can say SEO is extremely economical as well as affordable.
+        SDAD Technology, the Best SEO Company in India, is a leading brand that offers its customers
+        quality SEO services at an affordable price.</p>
+
+      <p>Our carefully priced SEO packages are now available with an increased standard of ROI to get your task
+        done effectively and efficiently. However, most business owners look forward to optimising their websites
+        for the best ranking based on some specific keyword. They should definitely try out the services offered
+        by SDAD Technology.</p>
+      <h2>Why choose us:</h2>
+      <p>The value of SEO for brands grows each and every day, but it needs a highly skilled, experienced team of
+        developers, as well as online specialists, who maximise what kind of services we can offer for your business.
+        This has helped us build up quite a reputation among our customers.</p>
     </div>
   </section>
 
-  <section class="divider">
-    <span class="line short"></span>
-    <span class="line long"></span>
-  </section>
-  <section class="about-section">
-    <div class="container">
-      <p>
-        Founded in 2017, AlphaTech Web is a forward-thinking IT services company dedicated to empowering businesses
-        through cutting-edge digital solutions. We combine innovation, strategy, and technology to help our clients
-        thrive in a rapidly evolving digital landscape.
-      </p>
-      <p>
-        At AlphaTech Web, our core services span digital marketing, web development, cybersecurity, and PR & brand
-        communication. Our digital marketing team is driven by data and creativity, helping brands amplify their online
-        presence, engage target audiences, and achieve measurable growth. We build intuitive, high-performance websites
-        that are not only visually stunning but also tailored to meet the unique goals and challenges of each business.
-      </p>
-      <p>
-        We also excel in PR and strategic marketing, helping brands craft powerful narratives and build meaningful
-        relationships with their audiences. Through compelling storytelling and targeted campaigns, we help businesses
-        strengthen their reputation and market influence.
-      </p>
-      <p>
-        We also excel in PR and strategic marketing, helping brands craft powerful narratives and build meaningful
-        relationships with their audiences. Through compelling storytelling and targeted campaigns, we help businesses
-        strengthen their reputation and market influence.
-      </p>
-      <p>
-        At AlphaTech Web, we strive to be more than a service provider; we aim to be a partner in our clients' success,
-        delivering high-quality, innovative solutions that drive sustainable growth and enhance brand value.
-      </p>
-      <h2 class="quote">"Specialized by Choice. Exceptional by Design."</h2>
-    </div>
-  </section>
-  <section class="features-section">
-    <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Support Icon">
-      <h3>Excellent Support</h3>
-      <p>We provide excellent support to all the customers visiting AlphaTech Web in all means necessary.</p>
-    </div>
-    <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Team Icon">
-      <h3>Awesome Team</h3>
-      <p>In our company, we have a specialized team which can solve any problem in the shortest time possible.</p>
-    </div>
-    <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/1004/1004571.png" alt="Performance Icon">
-      <h3>Faster Performance</h3>
-      <p>As soon as the client reaches us, we provide them with the fastest and the best results possible.</p>
-    </div>
-  </section>
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column">
@@ -587,6 +719,7 @@
       &copy; Alpha TechWeb 2025 All Rights Reserved
     </div>
   </footer>
+
 </body>
 
 </html>

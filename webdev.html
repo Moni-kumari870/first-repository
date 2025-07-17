@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
+  <title>Web Development </title>
   <style>
     * {
       margin: 0;
@@ -38,7 +38,7 @@
     .logo img {
       height: 80px;
       width: 260px;
-      /* border-radius: 10px; */
+      border-radius: 10px;
     }
 
     .logo span {
@@ -133,141 +133,154 @@
       color: white;
     }
 
-    .about-header {
-      background-color: #00b4f1;
-      padding: 50px 0 20px;
-      text-align: center;
+
+    .hero-section {
+      background-color: #00AEEF;
       color: white;
-      position: relative;
+      text-align: center;
+      padding: 30px 20px 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .about-header h1 {
+    .hero-section h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 28px;
       font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .breadcrumb {
       margin-top: 10px;
-      font-size: 1.1em;
-      color: #cfefff;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .breadcrumb .arrow {
-      margin: 0 10px;
-    }
-
-    .breadcrumb .active {
-      color: white;
-      font-weight: bold;
-      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-bottom: 20px;
     }
 
     .breadcrumb a {
       color: white;
       text-decoration: none;
+      margin: 0 5px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .divider {
+    .breadcrumb .current-page {
+      font-weight: bold;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+
+    .breadcrumb span {
+      margin: 0 5px;
+    }
+
+    .content-section {
+      text-align: center;
+      padding: 40px 20px 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-top: -20px;
+    }
+
+    .content-section h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .underline {
       display: flex;
       justify-content: center;
-      align-items: center;
-      margin-top: -10px;
-      background: white;
-      padding: 20px 0;
+      gap: 10px;
     }
 
-    .line {
-      height: 3px;
-      background-color: #1ec9b0;
-      margin: 0 5px;
+    .underline::before,
+    .underline::after {
+      content: '';
       display: inline-block;
+      width: 30px;
+      height: 4px;
+      background-color: #00b7c6;
+      border-radius: 2px;
     }
 
-    .short {
-      width: 20px;
+
+    .services-container {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
     }
 
-    .long {
-      width: 100px;
+    .service-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
     }
 
-    .about {
+    .service-card img {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+
+    .service-content h3 {
+      margin: 0;
+      font-size: 24px;
+      color: #111;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .service-content p {
+      margin: 10px 0 0;
+      font-size: 15px;
+      line-height: 1.7;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    @media (max-width: 768px) {
+      .service-content h3 {
+        font-size: 20px;
+      }
+
+      .service-content p {
+        font-size: 14px;
+      }
+    }
+
+
+    .hero {
+      background-color: #3b6fc2;
+      color: white;
       text-align: center;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 18px;
-      margin: 50px;
-      margin-top: 30px;
-    }
-
-    .about-section {
       padding: 60px 20px;
-      text-align: center;
-      margin-top: -50px;
+      background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+      /* optional subtle bg */
+    }
+
+    .hero h1 {
+      font-size: 2em;
+      font-weight: 600;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .container {
-      max-width: 900px;
+      padding: 40px 20px;
+      max-width: 1000px;
       margin: 0 auto;
-
-    }
-
-    .container p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 10px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding-bottom: 10px;
-
     }
 
-    .quote {
-      margin-top: 40px;
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: white;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: black;
-      padding: 40px;
-      padding-bottom: -20px;
-      padding-top: 20px;
-    }
-
-    .features-section {
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-      padding: 60px 20px;
-      text-align: center;
-      flex-wrap: wrap;
-      background-color: #f9fafa;
-      margin-top: -90px;
-    }
-
-    .feature-box {
-      width: 300px;
-      margin: 20px;
-    }
-
-    .feature-box img {
-      width: 60px;
-      height: 60px;
+    .container h2 {
+      font-size: 1.8em;
       margin-bottom: 20px;
-    }
-
-    .feature-box h3 {
-      font-size: 1.4rem;
-      margin-bottom: 10px;
       color: #222;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    .feature-box p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #444;
+    .container p {
+      margin-bottom: 20px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
@@ -375,6 +388,7 @@
       color: #999;
     }
   </style>
+
 </head>
 
 <body>
@@ -384,7 +398,7 @@
         <img src="new logo.jpg" alt="Logo" id="main-logo">
       </div>
       <ul class="nav-links">
-        <li><a href="homepage.html">Home</a></li>
+        <li><a href="home.html">Home</a></li>
         <li><a href="aboutus.html">About Us</a></li>
         <li class="dropdown">
           <a href="#">Services ▾</a>
@@ -439,68 +453,118 @@
       </div>
     </div>
   </header>
-  <section class="about-header">
-    <div class="container">
-      <h1>ABOUT US</h1>
-      <nav class="breadcrumb">
-        <a href="home.html">Home</a>
-        <span class="arrow">→</span>
-        <span class="active">About Us</span>
-      </nav>
+  <div class="hero-section">
+    <h1> Website Development </h1>
+    <nav class="breadcrumb">
+      <a href="#">Home</a>
+      <span>→</span>
+      <a href="#" class="current-page">Website Development </a>
+    </nav>
+  </div>
+
+  <main class="content-section">
+    <h2>Web Development Company in NCR</h2>
+    <div class="underline"></div>
+  </main>
+  <div class="services-container">
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/128/1828/1828925.png" alt="Web App Icon">
+      <div class="service-content">
+        <h3>Web Application</h3>
+        <p>Web applications are quite famous these days as they reduce the hassle of installing a dedicated program for
+          certain tasks. As the best website development company in Delhi NCR, we develop web-based applications with
+          zero bugs or crashing error issues.</p>
+      </div>
     </div>
+
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/128/1828/1828925.png" alt="E-Commerce Icon">
+      <div class="service-content">
+        <h3>E-Commerce</h3>
+        <p>Our e-commerce solutions help businesses build robust online stores with secure payment gateways, seamless
+          navigation, and engaging user experiences. From small businesses to large enterprises, we create scalable,
+          mobile-friendly, high-performance platforms tailored to your needs.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/128/1828/1828925.png" alt="Enterprise Icon">
+      <div class="service-content">
+        <h3>Web & Enterprise portal</h3>
+        <p>Web and enterprise portals let you monitor your website and manage any necessary changes you may observe with
+          your own personal log. We provide secure and scalable solutions that integrate AI automation, analytics, and
+          cloud services to enhance business growth.</p>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="https://cdn-icons-png.flaticon.com/128/1828/1828925.png" alt="CMS Icon">
+      <div class="service-content">
+        <h3>CMS Website</h3>
+        <p>Looking for a website development company near Delhi NCR that also provides CMS? At SDAD Technology, we offer
+          CMS development services that empower businesses with easy-to-manage platforms like WordPress. Our CMS
+          solutions ensure flexibility, security, and scalability.</p>
+      </div>
+    </div>
+  </div>
+  <section class="hero">
+    <h1>" Making Your Idea's come live with your<br>
+      Requirements and design is our strong suit. "</h1>
   </section>
 
-  <section class="divider">
-    <span class="line short"></span>
-    <span class="line long"></span>
+  <section class="container">
+    <h2>Website Development Company Is Crucial To Enhance Your Business</h2>
+    <p>
+      Website Development Company In Delhi NCR is the creation of dynamic web applications like social networking sites
+      such as Facebook, Twitter, etc. In the global web development market, SDAD Technology is one of the Best Website
+      Development companies in Delhi NCR.
+    </p>
+    <p>
+      Among other web development companies, SDAD technology is a leading Web Development Company in Noida. We have a
+      team of professional web development experts who take the project from scratch and follow a unique development
+      approach to deliver the best product.
+    </p>
+    <p>
+      Among other web development companies, SDAD Technology is a leading Web Development Company in Noida. We have a
+      team of professional web development experts who take the project from scratch and follow a unique development
+      approach to deliver the best product.
+    </p>
+    <h2>Why Choose SDAD Technology for Website Development?</h2>
+    <p>
+      As a top Website Development Company In Delhi NCR, we have a dedicated team of developers who are creating
+      powerful and engaging websites. We focus on delivering the best and unique products. This approach has made our
+      company a leading one. We put the best experts on a project and let them do what they want to do for creating a
+      website or application for you and your business. When it comes to web development services India, we make sure
+      that we use our best creativity for your project. Also, we ensure the comfortability of the project we deliver to
+      you. We’ll make a design that is unique for your website.
+    </p>
+    <h2>Driving Business Growth Through Innovative Website Design</h2>
+    <p>
+      Web development helps to improve your business and boost effectiveness and profitability. It uses the website as a
+      user interface. Our development process is a holistic process. From the initial stage, we start working on content
+      strategy, user pathways, and information architecture. With the existence of new technologies and online trends,
+      the need for the website is high in the market. We engage our users with a high-end customer-candid website. The
+      team of professionals holds considerable experience starting from simple websites to complex portals. We develop
+      an impactful website design to engage users with your website from the first visit.
+    </p>
+    <h2>Comprehensive Web Development Services We Offer</h2>
+    <p>
+      SDAD Technology has made custom web development affordable for business owners who want powerful websites with
+      unique features. Website Development Company In Delhi NCR refers to the tasks associated with the development of
+      websites for hosting via the internet or intranet. In this process, we also do web designing, web content
+      development, client-side or server-side scripting, and network security configuration, etc. We have the experience
+      and skills at our Best Website Development Company In Delhi NCR to develop your site then show you how a real we
+      will make your brand and your business grow. The strategies are data-driven and developed from experience to
+      design the real results over time, organic results that last and grow.
+    </p>
+    <p>
+      A website is more than just a collection of pretty images and keywords. It is your online presence that aims at
+      your digital existence, the storefront of the future. If you are planning to go online, then you need a Website
+      Development Company In Delhi NCR to develop creative and authentic websites. So, if you are looking for a Website
+      Designing Company, your search ends here.
+    </p>
   </section>
-  <section class="about-section">
-    <div class="container">
-      <p>
-        Founded in 2017, AlphaTech Web is a forward-thinking IT services company dedicated to empowering businesses
-        through cutting-edge digital solutions. We combine innovation, strategy, and technology to help our clients
-        thrive in a rapidly evolving digital landscape.
-      </p>
-      <p>
-        At AlphaTech Web, our core services span digital marketing, web development, cybersecurity, and PR & brand
-        communication. Our digital marketing team is driven by data and creativity, helping brands amplify their online
-        presence, engage target audiences, and achieve measurable growth. We build intuitive, high-performance websites
-        that are not only visually stunning but also tailored to meet the unique goals and challenges of each business.
-      </p>
-      <p>
-        We also excel in PR and strategic marketing, helping brands craft powerful narratives and build meaningful
-        relationships with their audiences. Through compelling storytelling and targeted campaigns, we help businesses
-        strengthen their reputation and market influence.
-      </p>
-      <p>
-        We also excel in PR and strategic marketing, helping brands craft powerful narratives and build meaningful
-        relationships with their audiences. Through compelling storytelling and targeted campaigns, we help businesses
-        strengthen their reputation and market influence.
-      </p>
-      <p>
-        At AlphaTech Web, we strive to be more than a service provider; we aim to be a partner in our clients' success,
-        delivering high-quality, innovative solutions that drive sustainable growth and enhance brand value.
-      </p>
-      <h2 class="quote">"Specialized by Choice. Exceptional by Design."</h2>
-    </div>
-  </section>
-  <section class="features-section">
-    <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Support Icon">
-      <h3>Excellent Support</h3>
-      <p>We provide excellent support to all the customers visiting AlphaTech Web in all means necessary.</p>
-    </div>
-    <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Team Icon">
-      <h3>Awesome Team</h3>
-      <p>In our company, we have a specialized team which can solve any problem in the shortest time possible.</p>
-    </div>
-    <div class="feature-box">
-      <img src="https://cdn-icons-png.flaticon.com/512/1004/1004571.png" alt="Performance Icon">
-      <h3>Faster Performance</h3>
-      <p>As soon as the client reaches us, we provide them with the fastest and the best results possible.</p>
-    </div>
-  </section>
+
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-column">
